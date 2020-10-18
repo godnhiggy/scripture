@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CSS Overlaying One DIV over Another DIV</title>
+<style> 
+    .container{
+        width: 200px;
+        height: 200px;
+        position: relative;
+        margin:30px;
+    }
+    .box{
+        width: 100%;
+        height: 100%;            
+        position: absolute;
+        top: 0;
+        left: 0;
+      	background:red;
+      	transition: background 4s, border-radius 4s;
+    }
+  .stack-middle{
+  		z-index:4;
+    	margin: -15px;
+    	background: green;
+    }
+    .stack-top{
+        z-index: 9;
+        margin: -30px; /* for demo purpose  */
+      	background: blue;
+    }
+  div:hover {
+   
+    background: yellow;
+  border-radius: 50px;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" ></div>
+      <div class="box stack-middle" ></div>
+        <div class="box stack-top" ></div>
+    </div>
+</body>
+</html>
